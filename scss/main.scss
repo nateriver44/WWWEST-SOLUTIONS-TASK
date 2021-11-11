@@ -1,0 +1,453 @@
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+
+$grid-breakpoints: (
+  sm: 1792px,
+  lg: 1920px,
+);
+
+$container-max-widths: (
+  sm: 828px,
+  lg: 1080px,
+);
+
+
+@font-face { font-family: 'BBC Reith Sans'; src: url('BBCReithSans_Bd.TTF'); }
+
+$dark-blue: #1652AC;
+$light-grey: #EDEFF3;
+$dark-black: #020303;
+$shadow-black: #45494F;
+$bg-grey: #FBFBFC;
+
+@mixin font($color, $size, $weight, $style) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    font-style: $style;
+}
+
+@mixin font_without_weight($color, $size) {
+    color: $color;
+    font-size: $size;
+}
+
+.mobile_show {
+    display: none;
+}
+
+.navbar {
+    box-shadow: 0 1px 3px -2px black;
+
+    ul {
+        width: 100%;
+        justify-content: right;
+        place-content: center space-around;
+
+        li {
+            font-family: 'Noto Sans';
+        }
+    }
+}
+
+.luftkondensierte {
+    .row {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .col-lg-6 {
+        &.text {
+            margin-top: 85px;
+        }
+    }
+
+    .head_text {
+        @include font($dark-blue, 48px, 700, normal);
+        margin-bottom: 55px;
+
+    }
+
+    .sub_text {
+        font-family: 'BBC Reith Sans';
+        letter-spacing: -0.4px;
+        line-height: 32px;
+        margin-top: 20px;
+        border-top: 7px solid $light-grey;
+        border-bottom: 7px solid $light-grey;
+        padding: 50px 0 50px 0;
+        @include font($dark-black, 17px, 600, normal);
+    }
+
+    .head_section_2 {
+        font-family: 'BBC Reith Sans';
+        line-height: 32px;
+        @include font($dark-blue, 20px, 600, normal);
+    }
+
+    .sub_text_section_2 {
+        font-family: 'BBC Reith Sans';
+        line-height: 32px;
+        @include font($shadow-black, 17px, 1000, normal);
+    }
+}
+
+.modernste {
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .custom-pr-mr-0 {
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+    .cl-bg {
+        padding-top: 150px;
+        background: linear-gradient(180deg, #163DA2 0%, #003584 100%);
+
+        .head-text {
+            @include font(white, 20px, 700, normal);
+            font-family: 'Noto Sans';
+        }
+
+        .sub-text {
+            margin-top: 22px;
+
+            @include font_without_weight(white, 17px);
+
+            font-family: 'Noto Sans';
+            line-height: 32px;
+        }
+    }
+}
+
+.unsere {
+    .row {
+        margin-bottom: -300px;
+    }
+
+    .col-lg-6 {
+        margin-top: 85px;
+    }
+
+    img {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+    }
+
+    .head_section_1 {
+        font-family: 'BBC Reith Sans';
+        text-transform: uppercase;
+        line-height: 40px;
+        margin-left: 60px;
+        padding-top: 30px;
+
+        @include font($dark-blue, 20px, 700, normal);
+    }
+
+    .sub_text_section_1 {
+        font-family: 'Noto Sans';
+        font-size: 17px;
+        color: $shadow-black;
+        line-height: 32px;
+        margin-left: 60px;
+        padding-top: 10px;
+    }
+}
+
+.vorteile {
+    background: $bg-grey;
+
+    .head {
+        padding-top: 85px;
+        margin-bottom: 30px;
+
+        @include font($dark-black, 28px, 500, normal);
+        font-family: 'BBC Reith Sans';
+        
+    }
+
+    .custom-card {
+        background: white;
+        height: 135px;
+        border: 10px solid $bg-grey;
+
+
+        .row {
+            place-content: center space-around;
+            height: 100%;
+            border-radius: 20px;
+            box-shadow: 0 0 5px gray; 
+
+            .col-lg-3 img {
+                margin-left: 40px;
+            }
+
+            .card_text {
+                @include font($shadow-black, 19px, 500, normal);
+
+                font-family: 'Noto Sans';
+                margin-top: 10px;
+            }
+        }
+    }
+}
+.hauptmerkmale {
+
+    margin-top: 85px;
+    padding-top: 30px;
+    margin-left: 85px;
+    margin-right: 85px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px gray; 
+
+    .head {
+        padding-top: 30px;
+        padding-bottom: 50px;
+        @include font($dark-black, 28px, 500, normal);
+        font-family: 'BBC Reith Sans'
+    }
+
+    ul {        
+        padding-top: 10px;
+        margin-bottom: 50px;
+}
+
+    li {    
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        font-family: 'Noto Sans';
+        font-size: 17px;
+        color: $shadow-black;
+        line-height: 32px;
+        border: 0px 0px 0px 0px;
+    }
+
+    
+}
+
+.bilder {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .main_text {
+        font-family: BBC Reith Sans;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 40px;
+        letter-spacing: 4.42px;
+        margin-bottom: 30px;
+    }
+
+    .carousel-control-prev-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='1f70ff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    }
+    
+    .carousel-control-next-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='1f70ff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    }
+    .head_text {
+        font-family: BBC Reith Sans;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        margin-top:130px;
+        line-height: 40px;
+        text-align: center;
+        letter-spacing: 2.42px;
+        color: #020303;
+
+    }
+    .custom_btn {
+        height: 64px;
+        background: linear-gradient(180deg, #0C5CD6 0%, rgba(0, 56, 140, 0) 100%), #004FC7;
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.21);
+        border-radius: 12px;
+        width: 100%;
+        font-family: 'BBC Reith Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 40px;
+        color: #FAFBFE;
+        letter-spacing: 1.42px;
+    }
+    .none {
+        display: none;
+    }
+
+    .carousel-indicators {
+        right: -140px;
+        bottom: -84px;
+        button {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: #80ABFF;
+            margin: 0 20px 0 20px;
+            border: 1px solid #0045AC;
+        }
+        button.active {
+            background: linear-gradient(180deg, #005BE4 0%, rgba(0, 96, 241, 0) 100%), #004FC7;
+            border: 1px solid #BED8FF;
+        }
+    }
+
+
+    .right {
+        right: 55%;
+
+    }
+
+    .left, .right {
+        top: 105%;
+        opacity: 1;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 21px rgba(64, 68, 75, 0.14);
+        border-radius: 8px;
+        width: 125px;
+        height: 75px;
+    }
+}
+
+.footer01 {
+    background: white;
+    .container {
+        padding-top:75px;
+        padding-bottom:55px;
+        border-top: 2px solid $light-grey;
+        border-bottom: 2px solid $light-grey;
+
+        .head_text {
+            font-family: BBC Reith Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 34px;
+            line-height: 43px;
+            letter-spacing: -0.4px;
+            color: #1652AC;
+            margin-top: 75px;
+        }
+
+        .sub_text {
+            font-family: Noto Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 17px;
+            line-height: 32px;
+            letter-spacing: -0.4px;
+            color: #464C53;
+        }
+        .custom_btn {
+            height: 64px;
+            background: linear-gradient(180deg, #0C5CD6 0%, rgba(0, 56, 140, 0) 100%), #004FC7;
+            border: 1px solid #FFFFFF;
+            box-sizing: border-box;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.21);
+            border-radius: 12px;
+            width: 100%;
+            font-family: 'BBC Reith Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 40px;
+            color: #FAFBFE;
+            letter-spacing: 1.42px;
+            margin-left: 500px;
+            margin-right: 500px;
+        }
+        .custom-pr-mr-1 {
+            padding-top:35px;
+            padding-bottom:25px; 
+        }
+
+
+    }
+}
+
+.footer02 {
+    background: white;
+    .container {
+        padding-top:75px;
+        padding-bottom:55px;
+    }
+    }
+
+
+
+@media (max-width: 828px) {
+    .mobile_show {
+         display: inline;
+     }
+     .mobile_hide {
+        display: none;
+     }
+
+    .luftkondensierte {
+        .head_text {
+            text-align: center;
+            border-bottom: 7px solid $light-grey;
+            padding-bottom: 50px;
+        }
+        .sub-text {
+            border: none;
+            @include font($dark-black, 32px, 800, normal);
+            letter-spacing: -0.004em;
+        }
+        .head_section_2 {
+            margin-left: 200px;
+            margin-right: 50px;
+            padding-right: 100px;
+            text-align: center;
+            letter-spacing: 2.42px;
+            line-height: 40px;
+        }
+    }
+
+    .modernste {
+        .head-text {
+    text-align: center;
+    letter-spacing: 2.42px;
+}
+.cl-bg {
+    padding: 50px 100px 50px 0px;
+    margin-right: 300px;
+
+}
+}
+
+.hauptmerkmale {
+    ul { 
+    padding-top: none;
+    margin-bottom: none;
+    }
+}
+
+    .bilder .carousel-indicators {
+        right: 0;
+    }
+
+    .unsere {
+        .col-lg-6 {
+            margin-top: 0;
+            img {
+                width: 139%;
+                margin-left: -141px;
+                height: 50%;
+                object-fit: unset;
+
+                &.custom-h-100 {
+                    height:100%;
+                }
+            }
+        }
+    }
+}
